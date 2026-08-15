@@ -18,6 +18,7 @@ void handler() {
         prompt[strcspn(prompt, "\n")] = '\0';
         tokenize(prompt, argv, 150);
         pid = fork();
+        if (strcmp(argv[0], "exit") == 0) {exit(0);}
         if (pid == 0) {
             execvp(argv[0], argv);
         } else {
