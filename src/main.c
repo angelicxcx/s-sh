@@ -5,7 +5,7 @@
 #include <wait.h>
 
 
-int tokenize(char *string, char *argv[], int max_tokens);
+void tokenize(char *string, char *argv[], int max_tokens);
 
 void handler() {
     char prompt[15000];

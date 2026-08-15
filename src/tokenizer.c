@@ -1,6 +1,6 @@
 #include <string.h>
 
-int tokenize(char *string, char *argv[], int max_tokens) {
+void tokenize(char *string, char *argv[], int max_tokens) {
     int count = 0;
     int i = 0;
     while (string[i] != '\0' && count < max_tokens - 1) {
@@ -15,5 +15,4 @@ int tokenize(char *string, char *argv[], int max_tokens) {
         }
     }
     argv[count] = NULL;
-    return count;
 }
