@@ -13,6 +13,7 @@ void tokenize(char *string, char *argv[], int max_tokens) {
             string[i] = '\0';
             i++;
         }
+        if (string[i] == '\n'){string[i] = '\0';}
     }
     argv[count] = NULL;
 }
